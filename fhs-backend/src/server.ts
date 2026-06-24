@@ -40,12 +40,10 @@ app.get('/api/health', (req: Request, res: Response) => {
 });
 
 // ============================================
-// ROUTES (To be added)
+// ROUTES
 // ============================================
-// app.use('/api/auth', require('./routes/auth'));
-// app.use('/api/users', require('./routes/users'));
-// app.use('/api/score', require('./routes/score'));
-// app.use('/api/loans', require('./routes/loans'));
+import authRoutes from './routes/auth';
+app.use('/api/auth', authRoutes);
 
 // ============================================
 // 404 HANDLER
